@@ -1,0 +1,1 @@
+> Bài này có phát triển thêm các ý ở bài 2.32 và được viết chung 1 package nên có thể coi bài này là 2 bài tập
