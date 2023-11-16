@@ -4,14 +4,20 @@ public class Main {
 	public static void main(String[] args) {
 
 		BalancedTree<Integer> tree = new BalancedTree<>();
-		tree.root = new BalancedNode<>(1);
-		tree.root.left = new BalancedNode<>(2);
-		tree.root.right = new BalancedNode<>(3);
-		tree.root.left.left = new BalancedNode<>(4);
-		tree.root.left.right = new BalancedNode<>(5);
+		tree.insert(5);
+		tree.insert(6);
+		tree.insert(3);
+		tree.insert(4);
+		tree.insert(2);
+		tree.insert(7);
+		tree.insert(10);
+		tree.insert(11);
+		tree.insert(12);
 
 
 		tree.setParent(tree.root , null);
+		System.out.println(tree.root.data);
+		System.out.println(tree);
 
 		if (tree.isBalanced())
 			System.out.println("The tree is balanced");
