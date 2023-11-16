@@ -21,7 +21,11 @@ Sau khi đã có một cây ngẫu nhiên, tiến hành tim kiếm trên cây. P
 Tuy nhiên không khuyến khích việc hiển thị vì sẽ khiến cho việc chờ đợi tìm kiếm lâu hơn (Do phải duyệt cây sau đó trả về kết quả).
 Các phương thức khác nâng cao hơn trong giờ lý thuyết được đưa vào trong lớp `AdvanceBST.java`
 
-> Lưu ý: Với trường hợp size = 10 ^ 8 chương trình bị tràn bộ nhớ (OutOfMemoryError)
+> Lưu ý: Với trường hợp size = 10^8 chương trình bị tràn bộ nhớ (OutOfMemoryError)
 
-Để chạy được với trường hợp 10 ^ 8 trở lên, cần config lại VM Options hoặc chạy trong terminal
-java -Xmx4g Statistics
+Để chạy được với trường hợp 10^8 trở lên, cần config lại VM Options hoặc chạy trong terminal
+java -Xmx4g Statistics hoặc liên hệ thông qua zalo: 0379061825 để được hỗ trợ chạy chương trình >= 10 ^ 8
+Yêu cầu cấu hình: 
++ Với test case <= 5 * 10 ^ 7: Tối thiểu 8GB Ram với trường hợp không rõ cách config hoặc config sai hoặc 4GB Ram Với trường hợp config được memory
++ Với test case > 5 * 10 ^ 7: Tối thiểu 16GB Ram với trường hợp không rõ cách config hoặc config sai hoặc 4GB Ram với trường hợp config memory
+> Cần lưu ý rằng với trường hợp tree node càng lớn, càng cấn phải cấp phát nhiều hơn, và không khuyến khích sử dụng size quá lớn vì thời gian để tạo cây rất lâu và rất tốn bộ nhớ có thể gây ra vấn đề với máy tính.

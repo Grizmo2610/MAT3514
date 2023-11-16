@@ -16,11 +16,11 @@ public class Statistics {
 		return tree;
 	}
 
-	public static void test(int size, boolean displayTree){
+	public static void test(int size, boolean displayTree, boolean displaySize){
 		final int BOUND = (int) Math.pow(10, 10);
 		int target = random.nextInt(BOUND);
 		System.out.println("Generate random tree! PLease wait!");
-		BinarySearchingTree<Integer> tree = randomIntegerTree(size, BOUND, true);
+		BinarySearchingTree<Integer> tree = randomIntegerTree(size, BOUND, displaySize);
 		if (displayTree){
 			System.out.println("Origin Tree: ");
 			System.out.println(tree);
@@ -42,10 +42,10 @@ public class Statistics {
 	}
 
 	public static void main(String[] args) {
-		for (int i = 1; i <= 9; i++){
+		for (int i = 8; i <= 8; i++){
 			int size = (int) Math.pow(10, i);
 			System.out.println("Testing with size = 10 ^ " + i);
-			test(size, false);
+			test(size, false, false);
 		}
 	}
 }
