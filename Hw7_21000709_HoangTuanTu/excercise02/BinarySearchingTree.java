@@ -12,7 +12,6 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 
 	public void insert(E data){
 		if (root == null){
-//			root = insertInSubTree(null , data);
 			root = new TreeNode<>(data);
 			size++;
 		}
@@ -21,7 +20,7 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 		}
 	}
 
-	public TreeNode<E> insertInSubTree(TreeNode<E> root, E data){
+	public void insertInSubTree(TreeNode<E> root, E data){
 		String      last_direction = "None";
 		TreeNode<E> parent         = root;
 
@@ -36,7 +35,7 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 				last_direction = "right";
 			}
 			else
-				return root;
+				return;
 		}
 
 		if (last_direction.equals("left"))
@@ -44,9 +43,7 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 		if (last_direction.equals("right"))
 			parent.right = new TreeNode<>(data);
 		size += 1;
-//		root = new TreeNode<>(data);
 
-		return root;
 	}
 
 	public TreeNode<E> root(){

@@ -29,3 +29,22 @@ Yêu cầu cấu hình:
 + Với test case <= 5 * 10 ^ 7: Tối thiểu 8GB Ram với trường hợp không rõ cách config hoặc config sai hoặc 4GB Ram Với trường hợp config được memory
 + Với test case > 5 * 10 ^ 7: Tối thiểu 16GB Ram với trường hợp không rõ cách config hoặc config sai hoặc 4GB Ram với trường hợp config memory
 > Cần lưu ý rằng với trường hợp tree node càng lớn, càng cấn phải cấp phát nhiều hơn, và không khuyến khích sử dụng size quá lớn vì thời gian để tạo cây rất lâu và rất tốn bộ nhớ có thể gây ra vấn đề với máy tính.
+
+#### Exercise 03: 
+
+#### Exercise 04:
+
+#### Practice 01:
+**Ý tưởng:** Do nếu một mảng là một dãy duyệt giữa của một cây tìm kiếm nhị phân thì chắc chắn mảng này phải là một mảng đã sắp xếp theo thứ tự tăng dần.
+Vì thế chỉ cần duyệt mảng từ i -> n-1 nếu như tồn tại một phần từ a[i] > a[i + 1] hay nói cách khác là tồn tại một phần tử lớn hơn đứng trước thì lập tức trả về false
+
+#### Practice 02:
+**Ý tưởng:** kiểm tra xem ở các cây con có phải là cây tìm kiếm nhị phân hay không. Sau đấy gọi đệ quy
+
+#### Practice 04:
+**Ý tưởng:** Tạo biến đếm, thực hiện phép duyệt (Ở đây sử dụng duyệt giữa) sau đấy so sánh giá trị, nếu trong khoảng thì tăng lên nếu không thì dừng lại;
+#### Practice 07:
+
+#### Practice 13:
+**Ý tưởng:** Thực hiện tương tự việc thêm node vào cây với node gốc là phần tử cuối cùng.
+Sau khi đã có gốc chúng ta duyệt ngược mảng và insert lần lượt sau đấy trả về nút gốc ta sẽ có cây tìm kiếm nhị phân.
