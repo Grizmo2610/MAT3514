@@ -30,6 +30,11 @@ Yêu cầu cấu hình:
 + Với test case > 5 * 10 ^ 7: Tối thiểu 16GB Ram với trường hợp không rõ cách config hoặc config sai hoặc 4GB Ram với trường hợp config memory
 > Cần lưu ý rằng với trường hợp tree node càng lớn, càng cấn phải cấp phát nhiều hơn, và không khuyến khích sử dụng size quá lớn vì thời gian để tạo cây rất lâu và rất tốn bộ nhớ có thể gây ra vấn đề với máy tính.
 
+_Lớp đặc biệt: _
++ Lớp `TestMemory.java`: Hiển thị các thông số của máy tính
++ Lớp `MostMermory.java`: (**Không khuyến khích chạy lớp này**) Lớp này ngoài lề cho các máy thần tiên chơi. Kiểm tra xem máy có thể chạy được quá khỏi mức máy bình thường không. Cần lưu ý trước là chương trình sẽ tốn gần như toàn bộ Ram để chạy chương trình nên hãy cân nhắc trong việc chạy chương trình này.
+
+Chương trình được import thêm thư viện `java.text.NumberFormat` để format kích thước (số) cho dễ nhìn.
 #### Exercise 03: 
 
 #### Exercise 04:
