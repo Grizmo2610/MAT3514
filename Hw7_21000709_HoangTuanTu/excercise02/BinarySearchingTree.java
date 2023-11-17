@@ -12,38 +12,24 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 
 	public void insert(E data){
 		if (root == null){
-			root = new TreeNode<>(data);
-			size++;
+			root = insertInSubTree(null , data);
 		}
 		else{
-			insertInSubTree(root, data);
+			root = insertInSubTree(root, data);
 		}
+		size++;
 	}
 
-	public void insertInSubTree(TreeNode<E> root, E data){
-		String      last_direction = "None";
-		TreeNode<E> parent         = root;
-
-
-		while (root != null) {
-			parent = root;
-			if (data.compareTo(root.data) < 0) {
-				root = root.left;
-				last_direction = "left";
-			} else if (data.compareTo(root.data) > 0) {
-				root = root.right;
-				last_direction = "right";
-			}
-			else
-				return;
+	public TreeNode<E> insertInSubTree(TreeNode<E> root, E data){
+		if (root == null){
+			root = new TreeNode<>(data);
+			return root;
+		}if (data.compareTo(root.data) < 0) {
+			root.left = insertInSubTree(root.left, data);
+		} else if (data.compareTo(root.data) > 0) {
+			root.right = insertInSubTree(root.right, data);
 		}
-
-		if (last_direction.equals("left"))
-			parent.left = new TreeNode<>(data);
-		if (last_direction.equals("right"))
-			parent.right = new TreeNode<>(data);
-		size += 1;
-
+		return root;
 	}
 
 	public TreeNode<E> root(){

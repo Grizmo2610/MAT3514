@@ -1,5 +1,6 @@
 package Hw7_21000709_HoangTuanTu.excercise02;
 
+import java.text.NumberFormat;
 import java.util.Random;
 
 public class Statistics {
@@ -8,8 +9,9 @@ public class Statistics {
 		BinarySearchingTree<Integer> tree = new BinarySearchingTree<>();
 		while (tree.getSize() < size) {
 			tree.insert(random.nextInt(bound) + 100);
-			if (tree.getSize() % 100000 == 0 && check) {
-				System.out.println(tree.getSize());
+			if (tree.getSize() % 1_000_000 == 0 && check) {
+				NumberFormat numberFormat = NumberFormat.getInstance();
+				System.out.println("Current size: " + numberFormat.format(tree.getSize()));
 			}
 		}
 
@@ -37,15 +39,20 @@ public class Statistics {
 			System.out.println(target + " is not in tree!");
 		}
 
-		System.out.println("Run time: " + ((end - start) / 1_000_000.0) + "(second)");
+		System.out.println("Searching time: " + ((end - start) / 1_000_000.0) + "(second)");
 		System.out.println("_______________________\n");
 	}
 
 	public static void main(String[] args) {
-		for (int i = 8; i <= 8; i++){
-			int size = (int) Math.pow(10, i);
-			System.out.println("Testing with size = 10 ^ " + i);
-			test(size, false, false);
+		for (int i = 6; i < 9; i++){
+			try{
+				int size = (int) Math.pow(10, i);
+				System.out.println("Testing with size = 10 ^ " + i);
+				test(size, false, true);
+			}catch (OutOfMemoryError e){
+				System.out.println("Maximum size is: 10 ^ " + i);
+				break;
+			}
 		}
 	}
 }
