@@ -50,7 +50,7 @@ Vì thế chỉ cần duyệt mảng từ i -> n-1 nếu như tồn tại một 
 #### Practice 04:
 **Ý tưởng:** Tạo biến đếm, thực hiện phép duyệt (Ở đây sử dụng duyệt giữa) sau đấy so sánh giá trị, nếu trong khoảng thì tăng lên nếu không thì dừng lại;
 #### Practice 07:
-
+**Ý tưởng:**: Phần tử bé nhất sẽ là phần tử lá bên trái cùng, nên chỉ cần duyệt cây đến lá cuối cùng thì đó chính là phần tử bé nhât.
 #### Practice 13:
 **Ý tưởng:** Thực hiện tương tự việc thêm node vào cây với node gốc là phần tử cuối cùng.
 Sau khi đã có gốc chúng ta duyệt ngược mảng và insert lần lượt sau đấy trả về nút gốc ta sẽ có cây tìm kiếm nhị phân.
