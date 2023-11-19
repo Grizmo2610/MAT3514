@@ -1,11 +1,11 @@
 package Hw7_21000709_HoangTuanTu.excercise02;
 public class BinarySearchingTree<E extends Comparable<E>> {
-	protected TreeNode<E> root;
-	public TreeNode<E> left(TreeNode<E> node){
+	protected Node<E> root;
+	public Node<E> left(Node<E> node){
 		return node.left;
 	}
 
-	public TreeNode<E> right(TreeNode<E> node){
+	public Node<E> right(Node<E> node){
 		return node.right;
 	}
 	private int size = 0;
@@ -17,12 +17,12 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 		else{
 			root = insertInSubTree(root, data);
 		}
-		size++;
 	}
 
-	public TreeNode<E> insertInSubTree(TreeNode<E> root, E data){
+	public Node<E> insertInSubTree(Node<E> root, E data){
 		if (root == null){
-			root = new TreeNode<>(data);
+			root = new Node<>(data);
+			size++;
 			return root;
 		}if (data.compareTo(root.data) < 0) {
 			root.left = insertInSubTree(root.left, data);
@@ -32,7 +32,7 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 		return root;
 	}
 
-	public TreeNode<E> root(){
+	public Node<E> root(){
 		return root;
 	}
 
@@ -40,7 +40,7 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 		return searchInSubTree(root, data);
 	}
 
-	public boolean searchInSubTree(TreeNode<E> root, E data){
+	public boolean searchInSubTree(Node<E> root, E data){
 		if (root == null) {
 			return false;
 		}
@@ -60,7 +60,7 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 		return minInSubTree(root).data;
 	}
 
-	public TreeNode<E> minInSubTree(TreeNode<E> root){
+	public Node<E> minInSubTree(Node<E> root){
 		if (root.left != null){
 			return minInSubTree(root.left);
 		}return root;
@@ -70,17 +70,17 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 		return maxInSubTree(root).data;
 	}
 
-	public TreeNode<E> maxInSubTree(TreeNode<E> root){
+	public Node<E> maxInSubTree(Node<E> root){
 		if (root.right != null){
 			return minInSubTree(root.right);
 		}return root;
 	}
 
-	public TreeNode<E> delete(E data){
+	public Node<E> delete(E data){
 		return deleteInSubTree(root, data);
 	}
 
-	public TreeNode<E> deleteInSubTree(TreeNode<E> root, E data){
+	public Node<E> deleteInSubTree(Node<E> root, E data){
 		if (root == null){
 			return null;
 		} if (data.compareTo(root.data) < 0) {
@@ -112,7 +112,7 @@ public class BinarySearchingTree<E extends Comparable<E>> {
 		return size;
 	}
 
-	private String helper(TreeNode<E> p){
+	private String helper(Node<E> p){
 		if (p != null){
 			return helper(p.getLeft()) + " " + p.getData() + " " + helper(p.getRight());
 		}

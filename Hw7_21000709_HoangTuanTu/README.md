@@ -35,6 +35,7 @@ _Lớp đặc biệt: _
 + Lớp `MostMermory.java`: (**Không khuyến khích chạy lớp này**) Lớp này ngoài lề cho các máy thần tiên chơi. Kiểm tra xem máy có thể chạy được quá khỏi mức máy bình thường không. Cần lưu ý trước là chương trình sẽ tốn gần như toàn bộ Ram để chạy chương trình nên hãy cân nhắc trong việc chạy chương trình này.
 
 Chương trình được import thêm thư viện `java.text.NumberFormat` để format kích thước (số) cho dễ nhìn.
+> Ngoài các cách ddeer config memory size có thể sử dụng github codespace để tăng tốc độ và khả năng chạy chương trình
 #### Exercise 03: 
 
 #### Exercise 04:

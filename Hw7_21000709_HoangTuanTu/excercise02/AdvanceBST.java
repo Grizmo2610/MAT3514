@@ -6,12 +6,12 @@ public class AdvanceBST<E extends Comparable<E>> extends BinarySearchingTree<E> 
 		return findKthMinInSubTree(root, k).data;
 	}
 
-	public TreeNode<E> findKthMinInSubTree(TreeNode<E> root, int k){
+	public Node<E> findKthMinInSubTree(Node<E> root, int k){
 		if (root == null) {
 			return null;
 		}
 
-		TreeNode<E> leftResult = findKthMinInSubTree(root.left, k);
+		Node<E> leftResult = findKthMinInSubTree(root.left, k);
 		if (leftResult != null) {
 			return leftResult;
 		}
