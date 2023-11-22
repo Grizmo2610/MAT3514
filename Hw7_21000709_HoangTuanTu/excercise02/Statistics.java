@@ -44,7 +44,7 @@ public class Statistics {
 	}
 
 	public static void main(String[] args) {
-		for (int i = 6; i < 9; i++){
+		for (int i = 9; i <= 9; i++){
 			try{
 				int size = (int) Math.pow(10, i);
 				System.out.println("Testing with size = 10 ^ " + i);
